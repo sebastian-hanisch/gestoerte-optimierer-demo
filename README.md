@@ -1,7 +1,6 @@
 # Gestörte Optimierer und Fenchel-Young: Rauschen, mitteln, lernen – Streamlit-Demo
 
-<!-- TODO nach dem Deploy: direkt hierher den Live-Link setzen (Leerzeile davor und danach):
-**[→ Demo live ausprobieren](https://sebastianhanisch-gestoerte-optimierer-demo.streamlit.app/)** -->
+**[→ Demo live ausprobieren](https://sebastianhanisch-gestoerte-optimierer-demo.streamlit.app/)**
 
 Stück der Reihe **Entscheidungsorientiertes Lernen** in der „Konzepte“-Reihe für die Website „Sebastian Hanisch – Operations Research und Machine Learning“. Vehikel ist ein abstraktes **5 × 5 Gitter** (Wege von links oben nach rechts unten, 40 Bögen, 70 Wege) wie in `spo-kuerzester-weg-demo`: Aus Merkmalen sollen Bogenkosten vorhergesagt werden, und ein exakter Löser wählt daraus den kürzesten Weg. Die Wahl des Lösers ist stückweise konstant in der Vorhersage; ein **gestörter Optimierer** stört die Vorhersage mit **Gauß-Rauschen**, löst mehrfach und **mittelt die Lösungen**. Die Demo trainiert dasselbe lineare Modell mit **Kleinsten Quadraten (KQ)**, mit **SPO+** und mit dem Teilgradienten der gemittelten gestörten Lösung, und sie zählt, **wie oft der Löser dafür laufen muss**.
 
