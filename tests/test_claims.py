@@ -6,7 +6,7 @@ Zahlen-Tabelle der README -> Test:
 |---|---|
 | Tabellen Regret ohne und mit Rauschen, Teilgradient an der Wahrheit, Stabilitätsprobe, Löseraufwand, Vergleich mit der Vormessung | `test_readme_contains_every_generated_table_line` (wörtlich aus den JSON-Dateien erzeugt) |
 | Aufbau der Messung (Seeds, Schritte, Lernrate, σ- und M-Werte) | `test_band_file_describes_the_documented_setup` |
-| Trägt σ? (Zählung der Seeds) | `test_sigma_wins_against_kq_with_noise_and_without` |
+| Reicht σ? (Zählung der Seeds) | `test_sigma_wins_against_kq_with_noise_and_without` |
 | σ = 0,1 gegen KQ (20 Seeds und Stabilitätsprobe) | `test_small_sigma_gives_no_gain_over_kq` |
 | gegen SPO+ | `test_against_spo_plus_the_difference_is_small` |
 | fünf Störungen | `test_five_perturbations_gain_and_cost` |

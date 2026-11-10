@@ -75,7 +75,7 @@ st.markdown(
     """
 Wenn die Entscheidung ein **Weg im Netz** ist, ist die Wahl des Lösers stückweise konstant in der Vorhersage: der Weg ändert sich nur an Sprungstellen, dazwischen ist der Gradient null.
 Ein **gestörter Optimierer** stört die Vorhersage mit **Rauschen**, löst das Problem mehrfach und **mittelt die Lösungen**: der Mittelwert ist glatt in der Vorhersage und braucht den Löser nur als Black Box.
-Der Teilgradient ist einfach **optimale Lösung minus gemittelte gestörte Lösung**. Die **Stärke σ** der Störung ist der Regler: zu klein verhält sich das Verfahren wie das harte Argmax; ab etwa der Größe der Kosten (σ = 1 bis 3 bei Kosten um 1,4) trägt es. Zu große σ sind nicht gemessen. Hier im 5 × 5 Gitter mit 40 Bögen und 70 Wegen, gegen SPO+ und Kleinste Quadrate (KQ), mit dem **Löseraufwand als Zahl gelöster Instanzen**.
+Der Teilgradient ist einfach **optimale Lösung minus gemittelte gestörte Lösung**. Die **Stärke σ** der Störung ist der Regler: zu klein verhält sich das Verfahren wie das harte Argmax; ab etwa der Größe der Kosten (σ = 1 bis 3 bei Kosten um 1,4) reicht es. Zu große σ sind nicht gemessen. Hier im 5 × 5 Gitter mit 40 Bögen und 70 Wegen, gegen SPO+ und Kleinste Quadrate (KQ), mit dem **Löseraufwand als Zahl gelöster Instanzen**.
 
 Weiter unten: **🔬 fünf Experimente**, **🚧 Wo die Annahmen enden** und der Expander **📐 Mathematische Formulierung**.
 """
@@ -138,7 +138,7 @@ if made and made[0] == settings:
 
 # --- Kernfrage -------------------------------------------------------------------------------------------------------------------------------
 
-st.markdown("## ❓ Kernfrage: Welche Stärke σ trägt, und was kostet sie?")
+st.markdown("## ❓ Kernfrage: Welche Stärke σ reicht, und was kostet sie?")
 name_sel = B.fy_name(sigma, m)
 kind, text = verdict_sigma(sigma, m, float(noise), B.median(float(noise), name_sel), B.median(float(noise), "kq"), B.median(float(noise), "SPO+"), B.better_than_kq(float(noise), name_sel), seeds_n)
 getattr(st, kind)(text)
@@ -378,5 +378,5 @@ st.markdown("---")
 st.caption(
     "Diese Demo ist Teil des Portfolios von [Sebastian Hanisch](https://sebastianhanisch.net) – "
     "Operations Research und Machine Learning ([Über mich](https://sebastianhanisch.net/ueber-mich.html)). "
-    "Mehr zu den Demos: [Interaktive Demos](https://sebastianhanisch.net/demos.html)."
+    "Mehr zur Reihe: [Entscheidungsorientiert: Regret bis Wahl](https://sebastianhanisch.net/konzepte-entscheidungsorientiert.html)."
 )
